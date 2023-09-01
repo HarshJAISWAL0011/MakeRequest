@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import { sendEmail } from './Email.js'; 
 const app = express();
 const baseurl='https://coin-dcx.onrender.com/';
-
+const port= process.env.PORT || 6000;
 app.get('/', function(req, res) {
     res.status(200).send({status: 200});
 });
@@ -26,3 +26,5 @@ setInterval(keepServerAlive, 14*60*1000); //Make request in every 14 minutes
         console.error(`Error while checking URL ${baseurl}: ${error.message}`);
       });
 }
+
+app.listen(port);
