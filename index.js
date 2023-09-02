@@ -2,14 +2,14 @@ import express from 'express';
 import fetch from 'node-fetch'; 
 import { sendEmail } from './Email.js'; 
 const app = express();
-const baseurl='https://requester-twha.onrender.com';//https://requester-twha.onrender.com
+const baseurl='https://coin-dcx.onrender.com/';//https://requester-twha.onrender.com
 const port= process.env.PORT || 6000;
 app.get('/', function(req, res) {
     res.status(200).send({status: 200});
 });
 
 setInterval(keepServerAlive, 12*60*1000); //Make request in every 12 minutes
-keepServerAlive();
+// keepServerAlive();
 
   function keepServerAlive() {
 //render will stop the server if no request is received in 15 min.
@@ -29,4 +29,4 @@ try {
 }catch(error) {console.error(error);}
 }
 
-app.listen(port); 
+app.listen(port);
