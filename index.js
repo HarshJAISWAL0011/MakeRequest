@@ -8,7 +8,7 @@ app.get('/', function(req, res) {
     res.status(200).send({status: 200});
 });
 
-setInterval(keepServerAlive, 12*60*1000); //Make request in every 12 minutes
+setInterval(keepServerAlive, 5*60*1000); //Make request in every 5 minutes
 // keepServerAlive();
 
   function keepServerAlive() {
