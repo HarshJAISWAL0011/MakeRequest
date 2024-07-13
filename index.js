@@ -15,18 +15,18 @@ setInterval(keepServerAlive, 5*60*1000); //Make request in every 5 minutes
   function keepServerAlive() {
 //render will stop the server if no request is received in 15 min.
 try {
-    fetch( baseurl )
-    .then(response => {
-        if (response.ok) {
-          console.log(`URL ${baseurl} is reachable. Status Code: ${response.status}`);
-        } else {
-          console.error(`URL ${baseurl} returned an error. Status Code: ${response.status}`);
-          sendEmail(`${baseurl} have some Error. Status Code: ${response.status}`);
-        }
-      })
-      .catch(error => {
-        console.error(`Error while checking URL ${baseurl}: ${error.message}`);
-      });
+    // fetch( baseurl )
+    // .then(response => {
+    //     if (response.ok) {
+    //       console.log(`URL ${baseurl} is reachable. Status Code: ${response.status}`);
+    //     } else {
+    //       console.error(`URL ${baseurl} returned an error. Status Code: ${response.status}`);
+    //       sendEmail(`${baseurl} have some Error. Status Code: ${response.status}`);
+    //     }
+    //   })
+    //   .catch(error => {
+    //     console.error(`Error while checking URL ${baseurl}: ${error.message}`);
+    //   });
 
     fetch(url2)
     
