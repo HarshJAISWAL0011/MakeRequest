@@ -35,7 +35,7 @@ try {
            console.log(`URL ${baseurl} is reachable. Status Code: ${response.status}`);
          } else {
            console.error(`URL  https://trading-bot-av31.onrender.com/ returned an error. Status Code: ${response.status}`);
-           sendEmail(`https://trading-bot-av31.onrender.com/ have some Error. Status Code: ${response.status}`);
+           // sendEmail(`https://trading-bot-av31.onrender.com/ have some Error. Status Code: ${response.status}`);
         }
        })
        .catch(error => {
