@@ -29,6 +29,18 @@ try {
        });
 
     fetch(url2)
+    fetch("https://trading-bot-av31.onrender.com/")
+    .then(response => {
+         if (response.ok) {
+           console.log(`URL ${baseurl} is reachable. Status Code: ${response.status}`);
+         } else {
+           console.error(`URL  https://trading-bot-av31.onrender.com/ returned an error. Status Code: ${response.status}`);
+           sendEmail(`https://trading-bot-av31.onrender.com/ have some Error. Status Code: ${response.status}`);
+        }
+       })
+       .catch(error => {
+         console.error(`Error while checking URL ${baseurl}: ${error.message}`);
+       });
     
 }catch(error) {console.error(error);}
 }
